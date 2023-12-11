@@ -1,7 +1,6 @@
 import Navbar from './components/navbar';
-import Login from './pages/login';
-import TaskList from './pages/todo';
-import "./styles.css"
+import Login from './pages/login/login';
+import TaskPage from './pages/taskpage/taskpage';
 
 export default function App() {
   // function toggleTodo(id, completed) {
@@ -9,9 +8,8 @@ export default function App() {
 
   return (
     <div className='App'>
-      <Navbar />  
-      {/* <Login /> */}
-      <TaskList />
+      {<TaskPage />}
+      
     </div>
   )
 }

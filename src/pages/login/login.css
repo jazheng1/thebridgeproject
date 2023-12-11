@@ -1,0 +1,117 @@
+/* Reset some basic elements */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /* This ensures all elements include padding and border in the element's total width and height */
+}
+
+/* Smooth scrolling */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Apply a global font */
+body {
+    font-family: sans-serif;
+}
+.card-logo {
+    display: flex;
+    justify-content: center; /* Centers the logo horizontally */
+    align-items: center; /* Centers the logo vertically if necessary */
+    width: 100%; /* Ensures the container spans the full width of its parent */
+  }
+  
+/* Container to center the card on the page */
+.container {
+    display: flex;
+    align-items: center; /* Centers vertically */
+    justify-content: center; /* Centers horizontally */
+    height: 100vh;
+    padding: 50px;
+}
+
+body {
+    font-family: sans-serif;
+    background-color: #f5f5f5; /* This sets a light grey background color */
+  }
+
+/* Card styling */
+/* Card styling with flexbox for internal spacing */
+.ant-card {
+    max-width: 400px;
+    width: 100%;
+    margin: 0 auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    display: flex;
+    flex-direction: column; /* Stack children vertically */
+    justify-content: space-around; /* Distribute space around the items */
+    align-items: center; /* Center align the items horizontally */
+    min-height: 450px; /* Adjust the height as needed */
+  }
+  
+
+/* Logo styling */
+.card-logo img {
+    width: 120px; /* Adjust width as needed */
+    margin-bottom: 20px;
+}
+
+/* Title styling */
+.card-title, .ant-card-head-title, h1 {
+    font-size: 24px; /* Adjust font size as needed */
+    font-weight: bold;
+    color: #cf2e2e;
+    margin-bottom: 24px;
+    text-align: center;
+}
+
+/* Style for both username and password fields */
+.ant-input,
+.ant-input-affix-wrapper {
+    border: 1px solid transparent; /* Set a default border */
+    border-bottom: 1px solid #d9d9d9; /* Visible bottom border */
+    padding: 4px 11px;
+}
+
+/* Ensure that the focus state is the same for both fields */
+.ant-input:focus,
+.ant-input-affix-wrapper:focus,
+.ant-input-affix-wrapper-focused {
+    border: 1px solid #0693e3; /* Apply focus border */
+    border-bottom: 1px solid #0693e3; /* Maintain bottom border */
+    box-shadow: none; /* Remove any focus shadow */
+}
+
+/* Correct the positioning of the password visibility toggle icon if needed */
+.ant-input-affix-wrapper .ant-input-suffix {
+    right: 11px; /* Or adjust as needed */
+}
+
+/* Form item spacing */
+.ant-form-item {
+    margin-bottom: 20px;
+}
+
+/* Button styling */
+.ant-btn-primary {
+    border-radius: 20px;
+    background-image: linear-gradient(to right, #0693e3, #0e76bc);
+    border: none;
+    color: white;
+    height: 40px;
+    margin-top: 20px;
+    margin: 0 auto; /* Centers the elements in their container */
+}
+
+/* Button hover state */
+.ant-btn-primary:hover {
+    background-image: linear-gradient(to right, #0e76bc, #005a9c);
+}
+
+/* Responsive adjustments */
+@media (min-width: 768px) {
+    .ant-card {
+        max-width: 400px; /* Keep the card width reasonable on larger screens */
+    }
+}
