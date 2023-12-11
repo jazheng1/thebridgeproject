@@ -1,15 +1,19 @@
-import Navbar from './components/navbar';
-import Login from './pages/login/login';
-import TaskPage from './pages/taskpage/taskpage';
+import React from 'react';
+import { BrowserRouter as Router, Route, Routes, Navigate } from 'react-router-dom';
+import LoginPage from './pages/login/login';
+import QuestionPage from './pages/questionpage/questionpage';
 
-export default function App() {
-  // function toggleTodo(id, completed) {
-  // }
-
+function App() {
   return (
-    <div className='App'>
-      {<TaskPage />}
-      
-    </div>
-  )
+    <Router>
+      <Routes>
+        <Route path="/login" element={<LoginPage />} />
+        <Route path="/questions" element={<QuestionPage />} />
+        {/* Redirect to /login by default */}
+        <Route path="/" element={<Navigate replace to="/login" />} />
+      </Routes>
+    </Router>
+  );
 }
+
+export default App;

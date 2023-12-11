@@ -1,0 +1,22 @@
+.question-container {
+    padding: 24px;
+    max-width: 800px; /* Adjust width as needed */
+    margin: 24px auto;
+  }
+  
+  .question-title {
+    font-size: 20px;
+    margin-bottom: 16px;
+  }
+  
+  .ant-radio-group {
+    display: block;
+    margin-bottom: 16px;
+  }
+  
+  /* Additional global styles */
+  body {
+    background-color: #f0f2f5; /* Light grey background */
+    font-family: 'Arial', sans-serif;
+  }
+  
