@@ -1,5 +1,6 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Card, Input, Button, Progress } from 'antd';
+import { Navigate } from "react-router-dom";
 
 const TaskPage = () => {
   const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0);
@@ -27,6 +28,7 @@ const TaskPage = () => {
   return (
       <div className="task-page">
           <Progress percent={Math.round(progressPercent)} />
+          
           <Card className="question-card" bordered={false}>
               <div className="question-prompt">{questions[currentQuestionIndex].prompt}</div>
               <Input
